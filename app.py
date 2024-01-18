@@ -8,11 +8,15 @@ posts ={
         "age":22
     }
 
+
 @app.get("/") 
-def home():
+async def home():
     return {"message":" Thank God i run my fast api app" }
 
-@app.get("\posts")
-def getpost():
-    return posts
-    
+@app.get("\lists")
+def getlist():
+    return list
+@app.get("/")
+def getposts():
+    return {1,2,3,4,"Hello G"}
+#python -m uvicorn app:app --reload
